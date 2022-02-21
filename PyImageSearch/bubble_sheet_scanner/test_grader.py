@@ -65,10 +65,10 @@ for c in cnts:  #   c değerinin içinde dönüyoruz
 
     print(x,y,w,h)
     
-    area = cv2.contourArea(c)                                  #bubble lar yeteri kadar geniş ve uzun olmalıdır 
+    area = cv2.contourArea(c)   #bubble lar yeteri kadar geniş ve uzun olmalıdır 
     print("alan:    ",      area)
     
-    if area >900:
+    if area > 900:
 
         cv2.rectangle(paper_copy, (int(x),int(y)),((int(x)+int(w)),(int(y)+int(h))), (0,0,255),2)
                                                                                                 #bubble ların aspectRatio oranı ortalama 1 olmalıdır
