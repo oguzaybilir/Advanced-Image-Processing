@@ -10,7 +10,7 @@ ap.add_argument("-v","--video",help="path to the video file")
 ap.add_argument("-b","--buffer", type=int, default=32, help="max buffer size")
 args = vars (ap.parse_args())
 
-greenLower = (0,137,162)   #yeşil rengin hsv kodlarini aldik
+greenLower = (0,137,162)   #yeşil rengin hsv kodlarini girdik
 greenUpper = (180,255,251)
 
 pts = deque(maxlen=args["buffer"])  #noktaları deque ile sıraya dizdik

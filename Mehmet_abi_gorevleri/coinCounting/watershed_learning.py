@@ -13,7 +13,7 @@ args = vars(ap.parse_args())
 
 image = cv2.imread(args["image"])
 image = cv2.resize(image,(480,640))
-shifted = cv2.pyrMeanShiftFiltering(image,150,150)
+shifted = cv2.pyrMeanShiftFiltering(image,21,31)
 cv2.imshow("shifted",shifted)
 
 gray = cv2.cvtColor(shifted,cv2.COLOR_BGR2GRAY)

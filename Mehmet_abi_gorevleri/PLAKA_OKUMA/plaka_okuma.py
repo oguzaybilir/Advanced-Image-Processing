@@ -6,7 +6,7 @@ import pytesseract
 #hsv degerleri  H (94, 115), S (90, 255), V (36,255) 
 
 
-img = cv2.imread("okulan.jpg")
+img = cv2.imread("bmw.jpg.jpg")
 img = imutils.resize(img,width=500)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
