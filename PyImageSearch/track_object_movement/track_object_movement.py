@@ -70,7 +70,7 @@ while True:
                 dX = pts[-10][0] - pts[i][0]
                 dY = pts[-10][1] - pts[i][1]
                 (dirX, dirY) = ("", "")
-                if np.abs(dX) > 20: 
+                if np.abs(dX) > 20:
                     dirX = "East" if np.sign(dX) == 1 else "West"
                 if np.abs(dY) > 20:
                     dirY = "North" if np.sign(dY) == 1 else "South"
