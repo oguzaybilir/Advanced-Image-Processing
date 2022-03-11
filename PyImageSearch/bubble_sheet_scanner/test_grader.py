@@ -11,7 +11,7 @@ ap.add_argument("-i","--image",required="True",help="path to the input image")
 args = vars(ap.parse_args())
 
 answerKey = {0: 1, 1: 4, 2: 0, 3: 3, 4: 1}
-
+ 
 image = cv2.imread(args["image"])   #görüntüyü aldık
 cv2.imshow("image",image)
 cv2.waitKey(0)

@@ -26,6 +26,8 @@ firstFrame = None   #Video akışından ilk frame'i alıyoruz
 while True: #framelerin içinde dönüyoruz
 
     ret, frame = cap.read()   #ilk frame i al ve dolu mu boş mu diye bak 
+    frame = cv2.flip(frame,1) 
+    frame = imutils.resize(frame, width=500) 
     text = "Unoccupied"
 
     if ret == False:   #   frame None ise
