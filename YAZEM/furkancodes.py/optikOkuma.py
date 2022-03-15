@@ -14,7 +14,7 @@ image = cv2.imread(args["image"])  # Dosya yolu
 #=====  KENAR SİYAHLARI ALGILAMAK İÇİN ROİ ALANI DEĞERLERİ  ======#
 
 y1_hizalama = 0   # Y EKSENİNDE TAMAMINI ALMAK İÇİN BAŞLANGİC NOKTASINI RESMİN BAŞLANGICI YANİ 0 OLARAK VERİYORUZ
-y2_hizalama = image.shape[0]  # FOTOĞRAFIN SHAPENİN Y DEĞERİNİN YANİ KAĞIDIN UZUNLUĞUNU ALMAK İÇİN KULLANILIR 
+y2_hizalama = image.shape[0] # FOTOĞRAFIN SHAPENİN Y DEĞERİNİN YANİ KAĞIDIN UZUNLUĞUNU ALMAK İÇİN KULLANILIR 
 x1_hizalama = 35         # DIŞARDAN QR KOD  BİLGİSİ İLE VERİLECEK DEĞERLER (ÖZELLEŞTİRİLMİŞ) 
 x2_hizalama = 255         # DIŞARDAN QR KOD  BİLGİSİ İLE VERİLECEK DEĞERLER (ÖZELLEŞTİRİLMİŞ) 
 

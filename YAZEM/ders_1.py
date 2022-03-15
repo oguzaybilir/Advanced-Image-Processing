@@ -11,3 +11,4 @@ c = smp.symbols('c')
 y = smp.integrate(smp.sin(x)**2,str(smp.sin(x)))
 
 print(y)
+
