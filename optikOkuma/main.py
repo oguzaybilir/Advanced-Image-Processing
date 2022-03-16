@@ -137,7 +137,7 @@ class optik_okuma():
     #--------------------------------------------------------#
 
     def c_tipi_soru(self): # C TİPİ YÖNLENDİRME
-
+           
         soru_sayisi = int(input("SORU SAYISI: "))
         self.ogrenci_no_start(self)
 
@@ -161,7 +161,7 @@ class optik_okuma():
     x2_hizalama = 255 
 
     def kenar_algılama_ve_kontrol(self):
-
+   
         self.kenar_siyahlar = kenar.hizalama(self.image,self.y1_hizalama,self.y2_hizalama,self.x1_hizalama,self.x2_hizalama)
 
         for i in range(0,3,1):
@@ -187,7 +187,7 @@ class optik_okuma():
 
         return self.kenar_siyahlar
 
-
+   
     #------------------  KAĞIT TİPİNE GÖRE YÖNLENDİRME   ----------------------#
 
     def kagit_tipi_secimi(self):  # kagıt tipi ekle arguman olarak kagıt tipi alınacak
@@ -201,7 +201,7 @@ class optik_okuma():
             ogrenci_no = self.ogrenci_no_start(self)
 
         if kagit_tipi == "B":
-
+           
             ogrenci_no = self.ogrenci_no_start(self)
             soru_cevap = self.b_tipi_soru(self)  # b tipi sorularının adet kıyaslaması
             kitapcik_türü = self.b_tipi_kitapcik_turu_start(self)
@@ -211,21 +211,21 @@ class optik_okuma():
             ogrenci_no = self.ogrenci_no_start(self)
             soru_cevap = self.c_tipi_soru(self)
             kitapcik_türü = self.c_tipi_kitapcik_turu_start(self)
-
+ 
         else:
             print("HATA: KAGIT TİPİ SEÇİMİ YANLIŞ")
 
 
 
 #------------------------------------------ OGRENCİ NO ------------------------------------------------# 
-
+ 
     #---ÖĞRENCİ NO DEĞERLER---#
     x1_ogrenci_no_sutun = 294
     x2_ogrenci_no_sutun= 1294
     ogrenci_no_indis_1 = 4
     ogrenci_no_indis_2 = 13
     ogrenci_no_aralik = 44
-
+      
     def ogrenci_no_start(self):
 
         cevap = ogrenci_no.ogrenci_no_sutun(
@@ -327,3 +327,16 @@ class optik_okuma():
         self.kenar_siyahlar, self.image, self.x1_kitapcik_turu,self.x2_kitapcik_turu,
         self.c_kitapcik_turu_indis_1, self.kitapcik_turu_aralık)
         return kitapcik_turu
+
+
+
+
+
+
+
+
+
+
+
+  
+

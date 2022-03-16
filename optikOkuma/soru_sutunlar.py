@@ -3,7 +3,10 @@ import numpy as np
 
 
 
-def birinci_soru_sutun(kenar_siyahlar, image, x1_birinci_soru_sutun,x2_birinci_soru_sutun,birinci_soru_sutun_indis_1,birinci_soru_sutun_indis_2,birinci_soru_sutun_aralık):
+def birinci_soru_sutun(
+    kenar_siyahlar, image, x1_birinci_soru_sutun,x2_birinci_soru_sutun,birinci_soru_sutun_indis_1,
+    birinci_soru_sutun_indis_2,birinci_soru_sutun_aralık
+    ):
 
     cevaplar_ilk_sutun = []
     i_soru = 1      
@@ -19,7 +22,7 @@ def birinci_soru_sutun(kenar_siyahlar, image, x1_birinci_soru_sutun,x2_birinci_s
             x1_birinci_soru_sutun:x2_birinci_soru_sutun
 
             ]
-
+ 
 
             cv2.destroyAllWindows()  
             cv2.imshow("roi_alan_kutucuk",roi_alan_kutucuk)  
@@ -39,9 +42,9 @@ def birinci_soru_sutun(kenar_siyahlar, image, x1_birinci_soru_sutun,x2_birinci_s
             y1_siklar = boy_siklar
             x2_siklar = 0
             x1_siklar = boy_siklar_parca
-    
+           
             for i in range(0,5,1):  
-                            
+                              
                 roi_alan_siklar = roi_alan_kutucuk[y2_siklar:y1_siklar , x2_siklar:x1_siklar]   
 
                 # ŞIK OLARAK İNCELEYEBİLMEMİZ İÇİN ONA GÖRE ROİ BELİRTİYORUZ
@@ -61,7 +64,7 @@ def birinci_soru_sutun(kenar_siyahlar, image, x1_birinci_soru_sutun,x2_birinci_s
                 cv2.imshow("roi_alan_siklar",roi_alan_siklar)
                 cv2.imshow("theresh ",dilate)
                 cv2.waitKey(0)
-
+  
                 # ŞIKLAR İÇERİSİNDE TEKRAR KONTUR ARATIP DOLULUK ORANLARINI  İNCELİYORUZ
                 for c in contours:
                     area = cv2.contourArea(c)  # ALAN HESAPLAMA
@@ -71,7 +74,7 @@ def birinci_soru_sutun(kenar_siyahlar, image, x1_birinci_soru_sutun,x2_birinci_s
                         cevap = i+1
                         isaretli += 1
                         
-            
+               
             if (isaretli == 0 and i==3) or isaretli > 1:
                 cevaplar_ilk_sutun.append([i_soru , 0])
             else :
@@ -126,9 +129,9 @@ def ikinci_soru_sutun(
             y1_siklar = boy_siklar
             x2_siklar = 0
             x1_siklar = boy_siklar_parca
-        
+           
             for i in range(0,5,1):  # HER ŞIK İÇİN FOR DÖNECEK 
-                            
+                              
                 roi_alan_siklar = roi_alan_kutucuk[y2_siklar:y1_siklar , x2_siklar:x1_siklar]   
 
                 # ŞIK OLARAK İNCELEYEBİLMEMİZ İÇİN ONA GÖRE ROİ BELİRTİYORUZ
@@ -148,7 +151,7 @@ def ikinci_soru_sutun(
                 cv2.imshow("roi_alan_siklar",roi_alan_siklar)
                 cv2.imshow("theresh ",dilate)
                 cv2.waitKey(0)
-
+  
                 # ŞIKLAR İÇERİSİNDE TEKRAR KONTUR ARATIP DOLULUK ORANLARINI  İNCELİYORUZ
                 for c in contours:
                     area = cv2.contourArea(c)  
@@ -158,13 +161,13 @@ def ikinci_soru_sutun(
                         cevap = i+1
                         isaretli += 1
                         
-            
+               
             if (isaretli == 0 and i==4) or isaretli > 1:
                 cevaplar_ikinci_sütün.append([i_soru , 0])
             else :
                 cevaplar_ikinci_sütün.append([i_soru ,cevap]) 
                         
-                    
+                       
             i_soru+=1 
     print("cevaplar",cevaplar_ikinci_sütün)
 
@@ -195,7 +198,7 @@ def ucuncu_soru_sutun(
             kenar_y - ücüncü_soru_sutun_aralık:kenar_y + ücüncü_soru_sutun_aralık,
             x1_ücüncü_soru_sutun:x2_ücüncü_soru_sutun]
 
-
+   
 
             cv2.destroyAllWindows() 
             cv2.imshow("roi_alan_kutucuk",roi_alan_kutucuk) 
@@ -213,9 +216,9 @@ def ucuncu_soru_sutun(
             y1_siklar = boy_siklar
             x2_siklar = 0
             x1_siklar = boy_siklar_parca
-        
+           
             for i in range(0,5,1):  
-                            
+                              
                 roi_alan_siklar = roi_alan_kutucuk[y2_siklar:y1_siklar , x2_siklar:x1_siklar]   
 
                 
@@ -234,7 +237,7 @@ def ucuncu_soru_sutun(
                 cv2.imshow("roi_alan_siklar",roi_alan_siklar)
                 cv2.imshow("theresh ",dilate)
                 cv2.waitKey(0)
-
+  
                 # ŞIKLAR İÇERİSİNDE TEKRAR KONTUR ARATIP DOLULUK ORANLARINI  İNCELİYORUZ
                 for c in contours:
                     area = cv2.contourArea(c)  # ALAN HESAPLAMA
@@ -244,13 +247,13 @@ def ucuncu_soru_sutun(
                         cevap = i+1
                         isaretli += 1
                         
-            
+               
             if (isaretli == 0 and i==4) or isaretli > 1:
                 cevaplar_ücüncü_sütün.append([i_soru , 0])
             else :
                 cevaplar_ücüncü_sütün.append([i_soru ,cevap]) # ORTA NOKTASI BELİRLEME   
                         
-                    
+                       
             i_soru+=1 
     print("cevaplar",cevaplar_ücüncü_sütün)
 

@@ -23,7 +23,5 @@ sözlük= {
 
 for i, j in np.array(cevaplar_ogrenci):
 
-    a = sözlük[j]
-    print(i,a)
-
+    print(sözlük[i])
 

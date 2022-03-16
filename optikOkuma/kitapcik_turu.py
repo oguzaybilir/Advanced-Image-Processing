@@ -30,7 +30,7 @@ def kitapcik_turu(
 
         for i,kenar_y in enumerate(kenar_siyahlar):  
 
-            isaretli = 1
+            isaretli = 0 
 
             x2_kitapcik_turu = x1_kitapcik_turu + aralık
                            

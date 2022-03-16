@@ -4,7 +4,10 @@ import numpy as np
 
 
 
-def ogrenci_degerlendirme_sutun(kenar_siyahlar, image, ogrenci_degerlendirme_aralık, x1_ogrenci_degerlendirme, x2_ogrenci_degerlendirme, ogrenci_degerlendirme_indis_1, ogrenci_degerlendirme_indis_2):
+def ogrenci_degerlendirme_sutun(
+
+    kenar_siyahlar, image, ogrenci_degerlendirme_aralık, x1_ogrenci_degerlendirme, x2_ogrenci_degerlendirme,
+    ogrenci_degerlendirme_indis_1, ogrenci_degerlendirme_indis_2):
 
     ogrenci_degerlendirme_cevaplar = [] 
     i_ogrenci_degerlendirme = 1    
@@ -29,7 +32,7 @@ def ogrenci_degerlendirme_sutun(kenar_siyahlar, image, ogrenci_degerlendirme_ara
 
             isaretli = 0 
             kenar_y= kenar_siyahlar[i]
-                
+                      
         
             roi_alan_kutucuk = image[
                 kenar_y - ogrenci_degerlendirme_aralık:kenar_y + ogrenci_degerlendirme_aralık,
@@ -74,3 +77,11 @@ def ogrenci_degerlendirme_sutun(kenar_siyahlar, image, ogrenci_degerlendirme_ara
 
         x1_ogrenci_degerlendirme = x1_ogrenci_degerlendirme + aralık
         x2_ogrenci_degerlendirme = x2_ogrenci_degerlendirme + aralık
+
+
+       
+
+
+
+
+
