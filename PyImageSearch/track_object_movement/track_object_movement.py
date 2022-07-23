@@ -7,11 +7,11 @@ import time
 
 ap = argparse.ArgumentParser()  # kullanıcıdanm veri girisi aldık
 ap.add_argument("-v","--video",help="path to the video file")
-ap.add_argument("-b","--buffer", type=int, default=32, help="max buffer size")
+ap.add_argument("-b","--buffer", type=int, default=100, help="max buffer size")
 args = vars (ap.parse_args())
 
-greenLower = (0,137,162)   #yeşil rengin hsv kodlarini aldik
-greenUpper = (180,255,251)
+greenLower = (0,139,79)   #yeşil rengin hsv kodlarini aldik
+greenUpper = (180,255,255)
 
 pts = deque(maxlen=args["buffer"])  #noktaları deque ile sıraya dizdik
 counter = 0

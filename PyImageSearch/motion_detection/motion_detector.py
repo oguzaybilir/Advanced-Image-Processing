@@ -1,4 +1,3 @@
-from typing_extensions import Required
 from imutils.video import VideoStream
 import argparse
 import datetime
@@ -32,6 +31,7 @@ while True: #framelerin içinde dönüyoruz
         break   #programı kapat
 
     frame = imutils.resize(frame, width=500)
+    frame = cv2.flip(frame, 1)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray = cv2.GaussianBlur(gray, (21, 21), 0) #   görseldeki gürültüleri engellemek için GaussianBlur uyguluyoruz
 
