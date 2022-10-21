@@ -1,5 +1,5 @@
 from skimage.feature import peak_local_max
-from skimage.morphology import watershed
+from skimage.segmentation import watershed
 from scipy import ndimage
 import numpy as np
 import argparse
@@ -11,7 +11,7 @@ ap.add_argument("-i","--image",required=True,help="path to input image")
 args = vars(ap.parse_args())
 
 image = cv2.imread(args["image"])
-image = cv2.resize(image, (800,600))
+#image = cv2.resize(image, (800,600))
 
 shifted = cv2.pyrMeanShiftFiltering(image,21,51)
 
